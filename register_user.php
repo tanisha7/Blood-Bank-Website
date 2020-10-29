@@ -15,18 +15,18 @@ $blood=json_decode(bloodList());
 		<form action="/bbms" method="post">
 		  <div class="form-group">
 		    <label for="username">Username</label>
-	      		 <input type="text" class="form-control register" id="username" aria-describedby="usernameHelp" placeholder="Enter username" autocomplete="off" required>
+	      		 <input type="text" class="form-control register" id="username" minlength=4 aria-describedby="usernameHelp" placeholder="Enter username" autocomplete="off" required>
 		      <small id="usernameHelp" class="form-text text-muted">Username is your unique identity which is used for login.<span id="check_user"></span></small>
 		  </div>
 			
 		  <div class="row">
 		  	<div class="form-group col-md-6">
 			    <label for="first_name">First Name</label>
-			    <input type="text" class="form-control register" id="first_name" placeholder="Enter First Name" autocomplete="off" required>
+			    <input type="text" class="form-control register" id="first_name" minlength=4 placeholder="Enter First Name" autocomplete="off" required>
 			  </div>
 			  <div class="form-group col-md-6">
 			    <label for="last_name">Last Name</label>
-			    <input type="text" class="form-control register" id="last_name" placeholder="Enter Last Name" autocomplete="off" required>
+			    <input type="text" class="form-control register" id="last_name" minlength=4 placeholder="Enter Last Name" autocomplete="off" required>
 			  </div>
 		  </div>
 		  <div class="form-group">
