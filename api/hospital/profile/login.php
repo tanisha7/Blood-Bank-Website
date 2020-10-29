@@ -22,7 +22,7 @@ if(!empty($username) && !empty($_REQUEST["password"])){
 			$output='{"status":"failure", "remark":"Password must be 6-12 characters long"}';
 		}
 	}else{
-		$output='{"status":"failure", "remark":"Username must be atleast 6 characters"}';
+		$output='{"status":"failure", "remark":"Username must be atleast 4 characters"}';
 	}
 }else{
 	$output='{"status":"failure", "remark":"All field are required"}';
