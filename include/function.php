@@ -67,7 +67,7 @@ function loginCheckHospitalRedirect()
     if(isset($_SESSION["type"]) && $_SESSION["type"]=="hospital" && isset($_SESSION["id"]) && !empty($_SESSION["id"])){
     
     }else{
-        header('Location: index.php');
+         return 'Error';
     }
 }
 
