@@ -11,12 +11,12 @@
 		<form action="/bbms" method="post">
 		  <div class="form-group">
 		    <label for="username">Username</label>
-		    <input type="text" class="form-control register" id="username" aria-describedby="usernameHelp" placeholder="Enter username" autocomplete="off" required>
+		    <input type="text" class="form-control register" minlength=3 id="username" aria-describedby="usernameHelp" placeholder="Enter username" autocomplete="off" required>
 		    <small id="usernameHelp" class="form-text text-muted">Username is your unique identity which is used for login.<span id="check_hospital"></span></small>
 		  </div>
 		  <div class="form-group">
 		    <label for="hospital_name">Hospital Name</label>
-		    <input type="text" class="form-control register" id="hospital_name" placeholder="Enter name of hospital" autocomplete="off" required>
+		    <input type="text" class="form-control register" id="hospital_name" placeholder="Enter name of hospital" minlength=4 autocomplete="off" required>
 		  </div>
 		  <div class="form-group">
 		    <label for="password">Password</label>
