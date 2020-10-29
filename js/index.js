@@ -45,10 +45,25 @@ function print_data(){
 			out+='<center><p class="text-danger">'+arr["remark"]+'</p></center>';
 		}
 		$("#stock_list").html(out);
+		request_btn();
 	});
 }
 
-
+function request_btn(){
+	$.post("api/check_login.php","",function(data){
+		console.log(data);
+		var arr=JSON.parse(data);
+		if(arr["type"]=="hospital"){
+			//hopital is login, then disabled this option
+			$(".request_blood_btn").addClass("disabled");
+		}else if(arr["type"]=="user"){
+			// user is login, nothing to do
+		}else{
+			// no one is login, so enable request btn, and link to login btn
+			$(".request_blood_btn").prop("href","login.php");
+		}
+	});
+}
 $("body").on("click",".request_blood_btn",function(){
 	var hospital_id=$(this).data("hospital_id");
 	var blood_id=$(this).data("blood_id");
